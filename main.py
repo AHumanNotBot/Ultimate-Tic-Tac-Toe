@@ -213,7 +213,7 @@ while True:
                             else:
                                 restrictedBox = 10
                                 pygame.draw.rect(DISPLAYSURF, (0, 255, 0), gamePosKey[nextBox + 1], 5)
-                            if miniGameWon[i-1]:
+                            if miniGameWon[i-1] and bigGrid[(i-1)//3][(i-1)%3] == 0:
                                 x = i-1
                                 bigGrid[x//3][x%3] = int(gameturn) + 1
 
